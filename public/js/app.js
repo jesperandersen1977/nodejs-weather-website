@@ -13,7 +13,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageOne.textContent = '';
     messageTwo.textContent = '';
 
-    fetch('https://nodejs-weather-website.onrender.com/Weather?address=' + location).then((response) => {
+    fetch('/Weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 messageOne.textContent = data.error;
